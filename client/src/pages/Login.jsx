@@ -31,9 +31,13 @@ function Login() {
       const data = await res.json();
       console.log('✅ 로그인 성공! 받은 토큰:', data.token);
       setMsg('로그인 성공!');
-      // 여기서 토큰 저장하거나 홈으로 이동 가능
-      // localStorage.setItem('token', data.token);
-      // navigate('/home');
+
+      // ✅ 토큰 저장
+      localStorage.setItem('token', data.token);
+
+      // ✅ 업로드 페이지로 이동
+      navigate('/upload');
+
     } catch (err) {
       console.error('❌ 로그인 요청 실패:', err);
       setMsg('서버 오류로 로그인 실패');

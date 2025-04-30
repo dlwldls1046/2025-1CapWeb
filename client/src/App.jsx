@@ -10,6 +10,7 @@ import AIIntro from './pages/AIIntro';
 import Diagram from './pages/Diagram';
 import MyPage from './pages/MyPage';
 import Contact from './pages/Contact';
+import UploadPage from './pages/UploadPage'; // ✅ 추가
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/diagram" element={<Diagram />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/upload" element={<UploadPage />} /> {/* ✅ 여기 추가 */}
       </Routes>
     </Router>
   );
