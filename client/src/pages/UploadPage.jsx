@@ -4,7 +4,7 @@ import axios from 'axios';
 function UploadPage() {
   const [file, setFile] = useState(null);
   const [result, setResult] = useState(null);
-  const [savedInfo, setSavedInfo] = useState(null); // ✅ 저장 결과 상태 추가
+  const [savedInfo, setSavedInfo] = useState(null);
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
@@ -20,26 +20,26 @@ function UploadPage() {
     formData.append('file', file);
 
     try {
-      // ✅ Flask AI 서버에 POST 요청 (.pcap 분석)
+      // 1. Flask 서버로 분석 요청
       const res = await axios.post('http://localhost:5050/predict', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
+        headers: { 'Content-Type': 'multipart/form-data' },
       });
 
       console.log('✅ AI 분석 결과:', res.data);
       setResult(res.data);
 
-      // ✅ 저장 요청
+      // 2. 저장 요청
       const userId = '테스트UserID123';
       const saveRes = await axios.post('http://localhost:5000/api/analysis/save', {
-        userId: userId,
+        userId,
         filename: file.name,
         result: res.data,
       });
 
-      console.log('✅ 결과 저장 완료:', saveRes.data);
-      setSavedInfo(saveRes.data.data); // 🔥 저장 결과를 상태에 기록
+      console.log('✅ 저장 결과 전체:', saveRes.data);
+      console.log('🕓 저장된 createdAt:', saveRes.data?.data?.createdAt);
+
+      setSavedInfo(saveRes.data.data);
 
     } catch (err) {
       console.error('❌ 분석 실패:', err);
@@ -64,9 +64,11 @@ function UploadPage() {
         </div>
       )}
 
-      {savedInfo && (
+      {savedInfo?.createdAt && (
         <div style={{ marginTop: '2rem', color: 'green' }}>
-          ✅ 저장 완료됨 ({new Date(savedInfo.createdAt).toLocaleString()})
+          ✅ 저장 완료됨 (
+          {new Date(savedInfo.createdAt).toLocaleString('ko-KR')}
+          )
         </div>
       )}
     </div>
