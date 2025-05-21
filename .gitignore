@@ -1,0 +1,8 @@
+# node_modules 전역 무시
+**/node_modules
+
+# .cache 전역 무시
+**/.cache
+
+# .eslintcache 무시
+**/.eslintcache
