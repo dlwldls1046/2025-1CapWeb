@@ -121,9 +121,6 @@ function UploadPage() {
         }}
       >
         <h2>PCAP 파일 업로드</h2>
-        <span style={{ color: '#777' }}>
-          2025 캡스톤디자인 - AI 기반 보안 분석 시스템
-        </span>
       </div>
 
       <div

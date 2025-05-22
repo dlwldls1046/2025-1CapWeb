@@ -30,6 +30,7 @@ function LoginPage() {
       localStorage.setItem('token', data.token)
       setMsg('로그인 성공!')
       navigate('/upload')
+      login() // 로그인
     } catch (err) {
       console.error('❌ 로그인 요청 실패:', err)
       setMsg('서버 오류로 로그인 실패')
