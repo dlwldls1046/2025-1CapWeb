@@ -71,6 +71,16 @@ function Intro() {
               , 누구나 쉽게 자신의 트래픽을 분석할 수 있도록 돕고자 합니다.
             </p>
           </div>
+
+          {/* ✅ 구조도 & 팀원 소개 버튼 추가 */}
+          <div style={{ marginTop: '40px', textAlign: 'center' }}>
+            <a href='/diagram' style={ctaStyle}>
+              프로젝트 구조도 보기
+            </a>
+            <a href='/members' style={{ ...ctaStyle, marginLeft: '20px' }}>
+              팀원 소개 보기
+            </a>
+          </div>
         </div>
       </div>
     </>

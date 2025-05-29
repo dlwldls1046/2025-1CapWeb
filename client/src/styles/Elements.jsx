@@ -107,7 +107,7 @@ export function Navbar() {
         <Link to='/intro' style={{ textDecoration: 'none', color: '#333' }}>
           서비스 소개
         </Link>
-        <Link to='/upload' style={{ textDecoration: 'none', color: '#333' }}>
+        <Link to='/contact' style={{ textDecoration: 'none', color: '#333' }}>
           사용법
         </Link>
         <Link to='/upload' style={{ textDecoration: 'none', color: '#333' }}>
