@@ -89,7 +89,7 @@ export function Navbar() {
           fontWeight: 'bold',
         }}
       >
-        <Link to='/' style={{ textDecoration: 'none', color: '#000' }}>
+        <Link to="/" style={{ textDecoration: 'none', color: '#000' }}>
           Packet School
         </Link>
       </div>
@@ -104,19 +104,19 @@ export function Navbar() {
         }}
       >
         {' '}
-        <Link to='/intro' style={{ textDecoration: 'none', color: '#333' }}>
+        <Link to="/intro" style={{ textDecoration: 'none', color: '#333' }}>
           서비스 소개
         </Link>
-        <Link to='/upload' style={{ textDecoration: 'none', color: '#333' }}>
+        <Link to="/Contact" style={{ textDecoration: 'none', color: '#333' }}>
           사용법
         </Link>
-        <Link to='/upload' style={{ textDecoration: 'none', color: '#333' }}>
+        <Link to="/upload" style={{ textDecoration: 'none', color: '#333' }}>
           패킷 탐지
         </Link>
         {isLoggedIn ? (
           <>
             <Link
-              to='/mypage'
+              to="/mypage"
               style={{ textDecoration: 'none', color: '#333' }}
             >
               마이페이지
@@ -139,11 +139,11 @@ export function Navbar() {
           </>
         ) : (
           <>
-            <Link to='/login' style={{ textDecoration: 'none', color: '#333' }}>
+            <Link to="/login" style={{ textDecoration: 'none', color: '#333' }}>
               로그인
             </Link>
             <Link
-              to='/register'
+              to="/register"
               style={{ textDecoration: 'none', color: '#333' }}
             >
               회원가입

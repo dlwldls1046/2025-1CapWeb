@@ -37,8 +37,11 @@ function Intro() {
               </strong>
             </p>
 
-            <a href='/upload' style={ctaStyle}>
+            <a href="/upload" style={ctaStyle}>
               패킷 업로드 하러 가기
+            </a>
+            <a href="/Diagram" style={{ ctaStyle, marginLeft: '10px' }}>
+              프로젝트 구조도
             </a>
           </div>
 
