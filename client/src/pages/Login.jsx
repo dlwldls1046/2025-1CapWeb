@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from './AuthContext'
 
 function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [msg, setMsg] = useState('')
   const navigate = useNavigate()
+  const { login } = useAuth()
 
   const handleLogin = async () => {
     if (!email || !password) {
@@ -28,9 +30,10 @@ function LoginPage() {
 
       const data = await res.json()
       localStorage.setItem('token', data.token)
+      login() 
       setMsg('로그인 성공!')
       navigate('/upload')
-      login() // 로그인
+  
     } catch (err) {
       console.error('❌ 로그인 요청 실패:', err)
       setMsg('서버 오류로 로그인 실패')
