@@ -107,7 +107,7 @@ function UploadPage() {
   return (
     <div
       style={{
-        backgroundColor: '#fff',
+        //backgroundColor: '#fff',
         minHeight: '100vh',
         padding: '2rem',
         fontFamily: 'sans-serif',
@@ -126,7 +126,7 @@ function UploadPage() {
       <div
         style={{
           backgroundColor: '#f9f9f9',
-          border: '1px solid #ddd',
+          border: '1px solid #999',
           padding: '1.5rem',
           borderRadius: '10px',
         }}
@@ -160,8 +160,8 @@ function UploadPage() {
             padding: '1.5rem',
             border: '1px solid #888',
             borderRadius: '10px',
-            backgroundColor: '#3a3a3a',
-            color: '#eee',
+            backgroundColor: '#f9f9f9',
+            color: '#222',
           }}
         >
           <h3>분석 결과</h3>

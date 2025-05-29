@@ -40,7 +40,7 @@ function LoginPage() {
   return (
     <div
       style={{
-        backgroundColor: '#f4f4f4',
+        //backgroundColor: '#f4f4f4',
         minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center',
@@ -100,7 +100,7 @@ function LoginPage() {
         </button>
         <p style={{ textAlign: 'center', marginTop: '20px', fontSize: '14px' }}>
           계정이 없으신가요?{' '}
-          <a href='/register' style={{ fontWeight: 'bold' }}>
+          <a href='/register' style={{ fontWeight: 'bold', color: 'inherit' }}>
             회원가입
           </a>
         </p>

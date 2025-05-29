@@ -53,7 +53,7 @@ export const listStyle = {
 export const ctaStyle = {
   display: 'inline-block',
   marginTop: '30px',
-  backgroundColor: '#1e40af',
+  backgroundColor: '#2563eb',
   color: '#fff',
   padding: '14px 28px',
   borderRadius: '10px',
@@ -84,13 +84,13 @@ export function Navbar() {
     >
       <div
         style={{
-          gridColumn: '1 / 2',
+          gridColumn: '1 / 3',
           fontSize: '24px',
           fontWeight: 'bold',
         }}
       >
         <Link to='/' style={{ textDecoration: 'none', color: '#000' }}>
-          캡스톤디자인
+          Packet School
         </Link>
       </div>
 
@@ -103,10 +103,16 @@ export function Navbar() {
           gap: '12px',
         }}
       >
+        {' '}
+        <Link to='/intro' style={{ textDecoration: 'none', color: '#333' }}>
+          서비스 소개
+        </Link>
+        <Link to='/upload' style={{ textDecoration: 'none', color: '#333' }}>
+          사용법
+        </Link>
         <Link to='/upload' style={{ textDecoration: 'none', color: '#333' }}>
           패킷 탐지
         </Link>
-
         {isLoggedIn ? (
           <>
             <Link
@@ -122,6 +128,10 @@ export function Navbar() {
                 border: 'none',
                 color: '#333',
                 cursor: 'pointer',
+                fontSize: '16px', // 링크와 통일
+                fontFamily: 'inherit', // 시스템 글꼴 유지
+                padding: 0, // 여백 제거
+                lineHeight: 'normal', // 정렬 자연스럽게
               }}
             >
               로그아웃

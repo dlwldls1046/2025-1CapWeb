@@ -27,8 +27,8 @@ function Intro() {
             </p>
             <p>
               ICMP Flood, SYN Flood, Port Scan, ARP Spoofing 등 다양한 네트워크
-              기반 공격을 실시간으로 탐지하며, 보안 지식이 없어도 누구나 쉽게
-              사용할 수 있도록 설계되었습니다.
+              기반 공격을 빠르게 탐지하며, 보안 지식이 없어도 누구나 쉽게 사용할
+              수 있도록 설계되었습니다.
             </p>
             <p>
               <strong>

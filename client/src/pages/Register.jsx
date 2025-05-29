@@ -78,7 +78,7 @@ function RegisterPage() {
   return (
     <div
       style={{
-        backgroundColor: '#f4f4f4',
+        //backgroundColor: '#f4f4f4',
         minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center',
