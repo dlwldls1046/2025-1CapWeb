@@ -15,6 +15,7 @@ import MyPage from './pages/MyPage'
 import Contact from './pages/Contact'
 import UploadPage from './pages/UploadPage'
 import Attack from './pages/Attack'
+import Members from './pages/Members'
 
 function App() {
   const pageStyle = {
@@ -43,6 +44,7 @@ function App() {
               <Route path='/contact' element={<Contact />} />
               <Route path='/upload' element={<UploadPage />} />
               <Route path='/attack' element={<Attack />} />
+              <Route path='/members' element={<Members />} />
             </Routes>
           </div>
           <Footer />
