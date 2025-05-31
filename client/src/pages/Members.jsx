@@ -6,31 +6,36 @@ const members = [
     name: '이지원',
     info: '정보보호학과 22학번',
     role: 'PM, 기획, AI개발, 프론트엔드',
-    github: 'https://github.com/example1',
+    github: 'https://github.com/leeazyone',
+    githubId: 'leeazyone',
   },
   {
     name: '이지인',
     info: '정보보호학과 22학번',
     role: '백엔드, 프론트엔드',
-    github: 'https://github.com/example2',
+    github: 'https://github.com/dlwldls1046',
+    githubId: 'dlwldls1046',
   },
   {
     name: '김시우',
     info: '정보보호학과 22학번',
     role: '백엔드, 프론트엔드',
-    github: 'https://github.com/example3',
+    github: 'https://github.com/8woo4',
+    githubId: '8woo4',
   },
   {
     name: '이태연',
     info: '정보보호학과 20학번',
     role: 'AI개발, 프론트엔드',
-    github: 'https://github.com/example4',
+    github: 'https://github.com/leetaeyeon11111',
+    githubId: 'leetaeyeon11111',
   },
   {
     name: '장재원',
     info: '정보보호학과 20학번',
     role: 'AI개발, 프론트엔드',
-    github: 'https://github.com/example5',
+    github: 'https://github.com/dodo4421',
+    githubId: 'dodo4421',
   },
 ]
 
@@ -69,8 +74,9 @@ const profileImageStyle = {
   width: '100px',
   height: '100px',
   borderRadius: '50%',
-  backgroundColor: '#eee',
+  objectFit: 'cover',
   margin: '0 auto 12px',
+  backgroundColor: '#eee',
 }
 
 export default function Members() {
@@ -80,11 +86,14 @@ export default function Members() {
       <div style={containerStyle}>
         {members.map((member, index) => (
           <div key={index} style={cardStyle}>
-            <div style={profileImageStyle}></div>
+            <img
+              src={`https://github.com/${member.githubId}.png`}
+              alt={`${member.name} 프로필`}
+              style={profileImageStyle}
+            />
             <h3>{member.name}</h3>
             <p>{member.info}</p>
             <p>{member.role}</p>
-            {/* ✅ GitHub 아이콘 링크 */}
             <a
               href={member.github}
               target='_blank'
