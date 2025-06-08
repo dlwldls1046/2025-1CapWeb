@@ -30,10 +30,9 @@ function LoginPage() {
 
       const data = await res.json()
       localStorage.setItem('token', data.token)
-      login() 
+      login()
       setMsg('로그인 성공!')
       navigate('/upload')
-  
     } catch (err) {
       console.error('❌ 로그인 요청 실패:', err)
       setMsg('서버 오류로 로그인 실패')
